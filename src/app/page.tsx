@@ -1,5 +1,11 @@
+import { LoadingSpinnerButton } from "@/elements/components/loading-spinner-button";
+
 const HomePage = () => {
-  return <div></div>;
+  return (
+    <>
+      <LoadingSpinnerButton />
+    </>
+  );
 };
 
 export default HomePage;

@@ -1,21 +1,10 @@
 // External Imports
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { ReactNode } from "react";
 
 // Local Imports
+import { geistSans } from "@/styles/fonts";
 import "@/styles/globals.css";
-
-const geistSans = localFont({
-  src: "../../public/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../../public/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Motions by Gozman",
@@ -30,7 +19,7 @@ const RootLayout = ({ children }: Props) => {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.className} antialiased bg-background text-foreground`}
       >
         {children}
       </body>
