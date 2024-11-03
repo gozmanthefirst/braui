@@ -1,9 +1,12 @@
-import { LoadingSpinnerButton } from "@/elements/components/loading-spinner-button";
+// Local Imports
+import { GamesList } from "@/elements/components/games-list";
 
 const HomePage = () => {
   return (
     <>
-      <LoadingSpinnerButton />
+      {/* <LoadingSpinnerButton /> */}
+      {/* <ExpandingBox /> */}
+      <GamesList />
     </>
   );
 };
