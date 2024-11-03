@@ -17,8 +17,7 @@ type Game = {
   image: string;
 };
 
-const MotionImage = motion(Image);
-const MotionButton = motion(Button);
+const MotionButton = motion.create(Button);
 
 export const GamesList = () => {
   const [activeGame, setActiveGame] = useState<Game | null>(null);
