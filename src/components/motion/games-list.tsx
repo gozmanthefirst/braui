@@ -7,8 +7,8 @@ import { useEffect, useRef, useState } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 
 // Local Imports
-import { Button } from "@/shared/components/button";
-import { Wrapper } from "@/shared/components/wrapper";
+import { Button } from "@/components/ui/button";
+import { Wrapper } from "@/components/ui/wrapper";
 
 type Game = {
   title: string;

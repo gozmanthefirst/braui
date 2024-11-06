@@ -5,9 +5,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 // Local Imports
-import { Button } from "@/shared/components/button";
-import { Spinner } from "@/shared/components/spinner";
-import { Wrapper } from "@/shared/components/wrapper";
+import { Button } from "@/components/ui/button";
+import { Spinner } from "@/components/ui/spinner";
+import { Wrapper } from "@/components/ui/wrapper";
 
 const buttonCopy = {
   idle: "Send me a login link",

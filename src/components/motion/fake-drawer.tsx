@@ -6,8 +6,8 @@ import { useState } from "react";
 import useMeasure from "react-use-measure";
 
 // Local Imports
-import { Button } from "@/shared/components/button";
-import { Wrapper } from "@/shared/components/wrapper";
+import { Button } from "@/components/ui/button";
+import { Wrapper } from "@/components/ui/wrapper";
 
 const MotionButton = motion.create(Button);
 

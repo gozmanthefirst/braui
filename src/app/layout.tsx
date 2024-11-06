@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 
 // Local Imports
+import { Header } from "@/components/ui/header";
+import { Navigation } from "@/components/ui/navigation";
 import { geistSans } from "@/styles/fonts";
 import "@/styles/globals.css";
 
@@ -21,7 +23,11 @@ const RootLayout = ({ children }: Props) => {
       <body
         className={`${geistSans.className} antialiased bg-background text-foreground`}
       >
-        {children}
+        <div className="flex flex-col justify-between min-h-dvh">
+          <Header />
+          {children}
+          <Navigation />
+        </div>
       </body>
     </html>
   );

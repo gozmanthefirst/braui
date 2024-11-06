@@ -2,7 +2,7 @@
 import { forwardRef, HTMLAttributes } from "react";
 
 // Local Imports
-import { cn } from "../lib/utils/cn";
+import { cn } from "../../lib/utils/cn";
 
 export interface ElementProps extends HTMLAttributes<HTMLDivElement> {}
 
