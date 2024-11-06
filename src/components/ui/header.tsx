@@ -12,7 +12,7 @@ export const Header = () => {
         <Link href={"/"}>
           <div className="relative size-10">
             <Image
-              src={"/images/logo-gray-2.png"}
+              src={"/images/logo-gray.png"}
               alt="Logo"
               fill
               className="shadow-md"
