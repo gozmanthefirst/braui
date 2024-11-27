@@ -2,6 +2,7 @@
 import {
   TbDeviceGamepad2,
   TbHome2,
+  TbLayoutList,
   TbLoader,
   TbMessage2,
   TbRun,
@@ -37,5 +38,11 @@ export const motionPages = [
     value: "multi-step",
     name: "Multi-step",
     href: "/motions/multi-step",
+  },
+  {
+    icon: TbLayoutList,
+    value: "accordion",
+    name: "Accordion",
+    href: "/motions/accordion",
   },
 ];
