@@ -17,6 +17,7 @@ import useMeasure from "react-use-measure";
 import { Button } from "@/components/ui/button";
 import { Wrapper } from "@/components/ui/wrapper";
 import { IconType } from "react-icons";
+import { cn } from "@/lib/utils/cn";
 
 const MotionButton = motion.create(Button);
 
@@ -58,7 +59,8 @@ export const Accordion = () => {
 
   return (
     <Wrapper>
-      <motion.div className="relative mx-auto my-8 max-w-[500px] w-full">
+      <motion.div className="relative flex flex-col gap-4 mx-auto my-8 max-w-[500px] w-full">
+        {/* Main */}
         <div
           className="border border-neutral-800 bg-neutral-900 overflow-hidden p-0.5"
           style={{
@@ -106,7 +108,11 @@ export const SingleAccordionData = ({
       style={{
         borderRadius: 22,
       }}
-      className="relative overflow-hidden transition duration-200 hover:bg-neutral-950/50"
+      className={cn(
+        "relative overflow-hidden transition duration-200 hover:bg-neutral-950/30",
+        activeData === accordion.title &&
+          "bg-neutral-950/50 hover:bg-neutral-950/50"
+      )}
     >
       <div
         ref={ref}
