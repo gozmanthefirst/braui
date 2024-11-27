@@ -140,7 +140,7 @@ export const Feedback = () => {
                       Feedback received!
                     </h3>
                     <p className="text-sm text-[#63635d]">
-                      Thanks for helping me improve Sonner.
+                      Thanks for helping me improve Motions by Gozman.
                     </p>
                   </motion.div>
                 ) : (
