@@ -105,7 +105,7 @@ export const Navigation = () => {
                   duration: 0.3,
                   bounce: 0.2,
                 }}
-                className="absolute bottom-[125%] right-0 flex flex-col min-w-64 p-2 bg-neutral-800 rounded-2xl shadow-lg"
+                className="absolute bottom-[125%] right-0 flex flex-col min-w-64 p-2 bg-neutral-800 rounded-2xl shadow-lg overflow-auto max-h-[40dvh]"
               >
                 {motionPages.map((page) => (
                   <Link

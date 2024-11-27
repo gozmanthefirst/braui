@@ -3,9 +3,7 @@ import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 
 const config: Config = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
 
   darkMode: ["class"],
 
@@ -67,10 +65,14 @@ const config: Config = {
           "0%": { opacity: "1" },
           "100%": { opacity: "0.15" },
         },
+        pulse: {
+          "50%": { opacity: "0.5" },
+        },
       },
 
       animation: {
-        "load": "load 1.2s linear infinite",
+        load: "load 1.2s linear infinite",
+        skeleton: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },
