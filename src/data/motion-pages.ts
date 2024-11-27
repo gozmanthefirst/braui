@@ -1,5 +1,5 @@
 // External Imports
-import { TbDeviceGamepad2, TbHome2, TbLoader } from "react-icons/tb";
+import { TbDeviceGamepad2, TbHome2, TbLoader, TbMessage2 } from "react-icons/tb";
 
 export const motionPages = [
   {
@@ -19,5 +19,11 @@ export const motionPages = [
     value: "games-list",
     name: "Games List",
     href: "/motions/games-list",
+  },
+  {
+    icon: TbMessage2,
+    value: "feedback",
+    name: "Feedback",
+    href: "/motions/feedback",
   },
 ];
