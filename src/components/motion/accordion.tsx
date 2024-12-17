@@ -1,7 +1,7 @@
 "use client";
 
 // External Imports
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { Dispatch, SetStateAction, useState } from "react";
 import {
   TbBug,
@@ -16,8 +16,8 @@ import useMeasure from "react-use-measure";
 // Local Imports
 import { Button } from "@/components/ui/button";
 import { Wrapper } from "@/components/ui/wrapper";
-import { IconType } from "react-icons";
 import { cn } from "@/lib/utils/cn";
+import { IconType } from "react-icons";
 
 const MotionButton = motion.create(Button);
 

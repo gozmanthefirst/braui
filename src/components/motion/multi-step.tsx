@@ -1,7 +1,7 @@
 "use client";
 
 // External Imports
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
+import { AnimatePresence, motion, MotionConfig } from "motion/react";
 import { useMemo, useState } from "react";
 import useMeasure from "react-use-measure";
 

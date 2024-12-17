@@ -1,7 +1,7 @@
 "use client";
 
 // External Imports
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "motion/react";
 import { useRef } from "react";
 
 // Local Imports

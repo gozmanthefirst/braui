@@ -1,7 +1,7 @@
 "use client";
 
 // External Imports
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { TbList, TbX } from "react-icons/tb";
