@@ -46,7 +46,7 @@ export const LoadingSpinnerButton = () => {
           }}
           disabled={buttonState !== "idle"}
           size={"sm"}
-          className="relative overflow-hidden rounded-lg bg-gradient-to-b from-brand-200 to-brand-400 w-48 [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:justify-center [&>span]:drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.16)]"
+          className="relative overflow-hidden rounded-lg bg-linear-to-b from-brand-200 to-brand-400 w-48 [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:justify-center [&>span]:drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.16)]"
         >
           <AnimatePresence mode="popLayout" initial={false}>
             <motion.span

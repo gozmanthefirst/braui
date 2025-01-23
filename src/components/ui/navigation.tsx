@@ -127,13 +127,13 @@ export const Navigation = () => {
                           duration: 0.3,
                           bounce: 0.2,
                         }}
-                        className="absolute z-[60] inset-0 bg-neutral-950 rounded-xl"
+                        className="absolute z-60 inset-0 bg-neutral-950 rounded-xl"
                       />
                     ) : null}
 
                     <div
                       className={cn(
-                        "relative z-[70] flex items-center gap-2 rounded-xl px-3 py-3 overflow-hidden text-neutral-400 transition",
+                        "relative z-70 flex items-center gap-2 rounded-xl px-3 py-3 overflow-hidden text-neutral-400 transition",
                         activeItem === page.href && "text-neutral-100"
                       )}
                     >

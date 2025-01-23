@@ -1,6 +1,82 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 356px;
+  --breakpoint-sm: 400px;
+  --breakpoint-smd: 532px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
+
+  --text-rs: 13px, 18px;
+
+  --color-background: #111111;
+  --color-foreground: #eeeeee;
+
+  --color-brand-100: #acf4b9;
+  --color-brand-200: #08db64;
+  --color-brand-300: #00d25b;
+  --color-brand-400: #11dd66;
+  --color-brand-500: #277e41;
+  --color-brand-600: #236a37;
+  --color-brand-700: #1c592d;
+  --color-brand-800: #144a24;
+  --color-brand-900: #0f3c1c;
+  --color-brand-1000: #122d19;
+  --color-brand-1100: #121b13;
+  --color-brand-1200: #0c130d;
+
+  --animate-load: load 1.2s linear infinite;
+  --animate-skeleton: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes load {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.15;
+    }
+  }
+  @keyframes pulse {
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= --theme(--breakpoint-xs)) {
+    max-width: none;
+  }
+  @media (width >= 1536px) {
+    max-width: 1536px;
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 ::-webkit-scrollbar {
   width: 8px;

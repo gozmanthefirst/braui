@@ -84,14 +84,14 @@ export const Feedback = () => {
           {open ? (
             <motion.div
               layoutId="feedback-button-and-popover"
-              className="absolute h-[192px] w-[364px] max-w-[calc(100%_-_1rem)] overflow-hidden bg-[#f5f6f7] p-1 outline-none shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04)]"
+              className="absolute h-[192px] w-[364px] max-w-[calc(100%_-_1rem)] overflow-hidden bg-[#f5f6f7] p-1 outline-hidden shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04)]"
               style={{ borderRadius: 12 }}
               ref={ref}
             >
               <motion.span
                 aria-hidden
                 layoutId="feedback-span-and-placeholder"
-                className="absolute top-[17px] left-[16px] text-sm text-[#63635d] data-[feedback=true]:!opacity-0"
+                className="absolute top-[17px] left-[16px] text-sm text-[#63635d] data-[feedback=true]:opacity-0!"
                 data-feedback={feedback ? "true" : "false"}
               >
                 Feedback
@@ -168,7 +168,7 @@ export const Feedback = () => {
                       autoFocus
                       placeholder="Feedback"
                       onChange={(e) => setFeedback(e.target.value)}
-                      className="w-full h-[128px] resize-none rounded-t-lg p-3 text-sm text-black outline-none placeholder:opacity-0"
+                      className="w-full h-[128px] resize-none rounded-t-lg p-3 text-sm text-black outline-hidden placeholder:opacity-0"
                       required
                     />
 
@@ -251,7 +251,7 @@ export const Feedback = () => {
                         disabled={formState !== "idle"}
                         type="submit"
                         size={"sm"}
-                        className="relative overflow-hidden rounded-lg bg-gradient-to-b from-brand-200 to-brand-400 w-32 h-7 ml-auto [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:justify-center [&>span]:drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.16)]"
+                        className="relative overflow-hidden rounded-lg bg-linear-to-b from-brand-200 to-brand-400 w-32 h-7 ml-auto [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:justify-center [&>span]:drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.16)]"
                       >
                         <AnimatePresence mode="popLayout" initial={false}>
                           <motion.span
