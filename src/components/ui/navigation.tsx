@@ -40,7 +40,7 @@ export const Navigation = () => {
   }, []);
 
   return (
-    <Container className="sticky bottom-0 right-0 flex justify-end z-50 py-6">
+    <Container className="sticky right-0 bottom-0 z-50 flex justify-end py-6">
       <div ref={ref} className="relative size-10 cursor-pointer rounded-xl">
         <Image
           src={"/images/squircle.png"}
@@ -66,13 +66,13 @@ export const Navigation = () => {
               <TbX
                 size={24}
                 strokeWidth={2.5}
-                className="shrink-0 text-neutral-200 group-hover:text-neutral-100 transition duration-150"
+                className="shrink-0 text-neutral-200 transition duration-150 group-hover:text-neutral-100"
               />
             ) : (
               <TbList
                 size={24}
                 strokeWidth={2.5}
-                className="shrink-0 text-neutral-200 group-hover:text-neutral-100 transition duration-150"
+                className="shrink-0 text-neutral-200 transition duration-150 group-hover:text-neutral-100"
               />
             )}
           </motion.div>
@@ -106,7 +106,7 @@ export const Navigation = () => {
                   duration: 0.3,
                   bounce: 0.2,
                 }}
-                className="absolute bottom-[125%] right-0 flex flex-col min-w-64 p-2 bg-neutral-800 rounded-2xl shadow-lg overflow-auto max-h-[40dvh]"
+                className="absolute right-0 bottom-[125%] flex max-h-[40dvh] min-w-64 flex-col overflow-auto rounded-2xl bg-neutral-800 p-2 shadow-lg"
               >
                 {motionPages.map((page) => (
                   <Link
@@ -127,14 +127,14 @@ export const Navigation = () => {
                           duration: 0.3,
                           bounce: 0.2,
                         }}
-                        className="absolute z-60 inset-0 bg-neutral-950 rounded-xl"
+                        className="absolute inset-0 z-60 rounded-xl bg-neutral-950"
                       />
                     ) : null}
 
                     <div
                       className={cn(
-                        "relative z-70 flex items-center gap-2 rounded-xl px-3 py-3 overflow-hidden text-neutral-400 transition",
-                        activeItem === page.href && "text-neutral-100"
+                        "relative z-70 flex items-center gap-2 overflow-hidden rounded-xl px-3 py-3 text-neutral-400 transition",
+                        activeItem === page.href && "text-neutral-100",
                       )}
                     >
                       <page.icon size={18} />

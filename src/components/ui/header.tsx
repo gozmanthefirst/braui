@@ -7,10 +7,10 @@ import { Container } from "./container";
 
 export const Header = () => {
   return (
-    <Container className="sticky top-0 z-50 py-6">
-      <header className="flex justify-start">
-        <Link href={"/"}>
-          <div className="relative size-8">
+    <Container className="pt-6 pb-4 md:pt-8 md:pb-6">
+      <header>
+        <Link href={"/"} tabIndex={-1} className="focus:outline-0">
+          <div className="relative size-9 md:size-10">
             <Image
               src={"/images/logo.png"}
               alt="Logo"

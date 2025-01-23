@@ -5,12 +5,12 @@ import { ReactNode } from "react";
 // Local Imports
 import { Header } from "@/components/ui/header";
 import { Navigation } from "@/components/ui/navigation";
-import { geistSans } from "@/styles/fonts";
+import { instrumentSans } from "@/styles/fonts";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Braui",
-  description: "A web app where I build random animated UIs.",
+  description: "A web app where I build brilliant random animated UIs.",
 };
 
 interface Props {
@@ -21,11 +21,11 @@ const RootLayout = ({ children }: Props) => {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.className} antialiased bg-background text-foreground`}
+        className={`${instrumentSans.className} bg-background text-foreground antialiased`}
       >
-        <div className="flex flex-col justify-between min-h-dvh">
+        <div className="flex min-h-dvh flex-col">
           <Header />
-          {children}
+          <div className="flex-1 py-4 md:py-6">{children}</div>
           <Navigation />
         </div>
       </body>
