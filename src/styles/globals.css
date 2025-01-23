@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -18,18 +18,18 @@
   --color-background: #111111;
   --color-foreground: #eeeeee;
 
-  --color-brand-100: #acf4b9;
-  --color-brand-200: #08db64;
-  --color-brand-300: #00d25b;
-  --color-brand-400: #11dd66;
-  --color-brand-500: #277e41;
-  --color-brand-600: #236a37;
-  --color-brand-700: #1c592d;
-  --color-brand-800: #144a24;
-  --color-brand-900: #0f3c1c;
-  --color-brand-1000: #122d19;
-  --color-brand-1100: #121b13;
-  --color-brand-1200: #0c130d;
+  --color-brand-1: oklch(93.8% 0.1421 142.5);
+  --color-brand-2: oklch(85% 0.2753 142.5);
+  --color-brand-3: oklch(83.5% 0.2753 142.5);
+  --color-brand-4: oklch(86.6% 0.2947 142.5);
+  --color-brand-5: oklch(52.5% 0.1664 142.5);
+  --color-brand-6: oklch(46.5% 0.1413 142.5);
+  --color-brand-7: oklch(41.2% 0.1217 142.5);
+  --color-brand-8: oklch(36.4% 0.104 142.5);
+  --color-brand-9: oklch(31.7% 0.0856 142.5);
+  --color-brand-10: oklch(26.7% 0.0614 142.5);
+  --color-brand-11: oklch(20.8% 0.0321 142.5);
+  --color-brand-12: oklch(17.8% 0.0237 142.5);
 
   --animate-load: load 1.2s linear infinite;
   --animate-skeleton: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;

@@ -9,8 +9,8 @@ import { geistSans } from "@/styles/fonts";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Motions by Gozman",
-  description: "Motions by Gozman",
+  title: "Braui",
+  description: "A web app where I build random animated UIs.",
 };
 
 interface Props {

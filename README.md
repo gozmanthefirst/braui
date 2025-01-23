@@ -1,3 +1,3 @@
-# Motions by Gozman
+# Braui
 
-Here, I learn and showcase components animated using Framer Motion. Currently following Emil Kowalski's animations course.
+A repository for building random animated UIs.

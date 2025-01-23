@@ -11,10 +11,10 @@ export const Element = forwardRef<HTMLDivElement, ElementProps>(
     return (
       <div
         ref={ref}
-        className={cn("size-12 bg-brand-400 rounded-xl", className)}
+        className={cn("bg-brand-4 size-12 rounded-xl", className)}
         {...props}
       />
     );
-  }
+  },
 );
 Element.displayName = "Element";

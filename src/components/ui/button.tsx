@@ -7,21 +7,21 @@ import { ButtonHTMLAttributes, forwardRef } from "react";
 import { cn } from "../../lib/utils/cn";
 
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400 disabled:pointer-events-none disabled:opacity-70",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-4 disabled:pointer-events-none disabled:opacity-70",
   {
     variants: {
       variant: {
-        brand: "bg-brand-400 text-background shadow-sm trigger:bg-brand-400/90",
+        brand: "bg-brand-4 text-background shadow-sm trigger:bg-brand-4/90",
         white:
           "bg-white text-black shadow-sm trigger:bg-white/90 focus-visible:outline-white",
         black:
           "bg-neutral-950 text-white shadow-sm trigger:bg-neutral-950/90 focus-visible:outline-neutral-950",
         secondary:
-          "bg-neutral-800 text-brand-400 shadow-sm trigger:bg-neutral-800/90 focus-visible:outline-neutral-800",
+          "bg-neutral-800 text-brand-4 shadow-sm trigger:bg-neutral-800/90 focus-visible:outline-neutral-800",
         grayed:
           "bg-neutral-600 text-foreground shadow-sm trigger:bg-neutral-600/90 focus-visible:outline-neutral-600",
         outline:
-          "border border-brand-500 bg-inherit text-brand-400 shadow-xs trigger:bg-brand-400/10 trigger:border-brand-400",
+          "border border-brand-5 bg-inherit text-brand-4 shadow-xs trigger:bg-brand-4/10 trigger:border-brand-4",
         ghost:
           "border-none bg-inherit text-neutral-200 trigger:text-neutral-100 focus-visible:outline-hidden focus-visible:outline-0 focus-visible:outline-offset-0",
       },
@@ -38,7 +38,7 @@ export const buttonVariants = cva(
       variant: "brand",
       size: "default",
     },
-  }
+  },
 );
 
 export interface ButtonProps
@@ -57,6 +57,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     );
-  }
+  },
 );
 Button.displayName = "Button";

@@ -1,19 +1,19 @@
 services:
-  motions-v1:
+  braui-v1:
     build:
       context: .
       dockerfile: Dockerfile
       target: runner
-    image: motions-v1:production
-    container_name: motions-v1-production
+    image: braui-v1:production
+    container_name: braui-v1-production
     ports:
       - "3004:3004"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
     networks:
-      - motions-v1-network
+      - braui-v1-network
 
 networks:
-  motions-v1-network:
+  braui-v1-network:
     driver: bridge

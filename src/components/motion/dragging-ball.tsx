@@ -19,25 +19,25 @@ export const DraggingBall = () => {
       <Wrapper>
         <div
           ref={boundingBox}
-          className="flex justify-center h-80 w-full p-6 bg-neutral-950 border border-neutral-800 overflow-hidden"
+          className="flex h-80 w-full justify-center overflow-hidden border border-neutral-800 bg-neutral-950 p-6"
         >
           <motion.div
             drag
             // this prevents the element from being dragged outside of the bounding box
             dragConstraints={boundingBox}
             dragMomentum={false}
-            className="h-10 w-10 rounded-full bg-brand-400 cursor-grab"
+            className="bg-brand-4 h-10 w-10 cursor-grab rounded-full"
           />
         </div>
 
-        <div className="flex justify-center h-80 w-full p-6 bg-neutral-950 border border-neutral-800 overflow-hidden">
+        <div className="flex h-80 w-full justify-center overflow-hidden border border-neutral-800 bg-neutral-950 p-6">
           <motion.div
             onPan={(_, info) => {
               y.set(info.offset.y);
             }}
             onPanEnd={() => y.set(0)}
             style={{ y, opacity }}
-            className="h-10 w-10 rounded-full bg-brand-400 cursor-grab"
+            className="bg-brand-4 h-10 w-10 cursor-grab rounded-full"
           />
         </div>
       </Wrapper>

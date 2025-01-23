@@ -60,7 +60,7 @@ export const Feedback = () => {
 
   return (
     <Wrapper>
-      <div className="flex items-center justify-center h-[500px] w-full">
+      <div className="flex h-[500px] w-full items-center justify-center">
         <MotionButton
           layoutId="feedback-button-and-popover"
           onClick={() => {
@@ -84,7 +84,7 @@ export const Feedback = () => {
           {open ? (
             <motion.div
               layoutId="feedback-button-and-popover"
-              className="absolute h-[192px] w-[364px] max-w-[calc(100%_-_1rem)] overflow-hidden bg-[#f5f6f7] p-1 outline-hidden shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04)]"
+              className="absolute h-[192px] w-[364px] max-w-[calc(100%_-_1rem)] overflow-hidden bg-[#f5f6f7] p-1 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04)] outline-hidden"
               style={{ borderRadius: 12 }}
               ref={ref}
             >
@@ -137,11 +137,11 @@ export const Feedback = () => {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    <h3 className="mb-1 mt-2 text-sm font-semibold text-[#21201c]">
+                    <h3 className="mt-2 mb-1 text-sm font-semibold text-[#21201c]">
                       Feedback received!
                     </h3>
                     <p className="text-sm text-[#63635d]">
-                      Thanks for checking out Motions by Gozman.
+                      Thanks for checking out Braui.
                     </p>
                   </motion.div>
                 ) : (
@@ -168,14 +168,14 @@ export const Feedback = () => {
                       autoFocus
                       placeholder="Feedback"
                       onChange={(e) => setFeedback(e.target.value)}
-                      className="w-full h-[128px] resize-none rounded-t-lg p-3 text-sm text-black outline-hidden placeholder:opacity-0"
+                      className="h-[128px] w-full resize-none rounded-t-lg p-3 text-sm text-black outline-hidden placeholder:opacity-0"
                       required
                     />
 
                     {/* Footer (Kinda) */}
-                    <motion.div className="relative flex items-center h-12 px-2.5">
+                    <motion.div className="relative flex h-12 items-center px-2.5">
                       <svg
-                        className="absolute left-0 right-0 top-[-1px]"
+                        className="absolute top-[-1px] right-0 left-0"
                         width="352"
                         height="2"
                         viewBox="0 0 352 2"
@@ -190,7 +190,7 @@ export const Feedback = () => {
                       </svg>
 
                       {/* Half Circle Left */}
-                      <div className="absolute left-0 -top-1.5 translate-x-[-1.5px]">
+                      <div className="absolute -top-1.5 left-0 translate-x-[-1.5px]">
                         <svg
                           width="6"
                           height="12"
@@ -219,7 +219,7 @@ export const Feedback = () => {
                       </div>
 
                       {/* Half Circle Right */}
-                      <div className="absolute right-0 -top-1.5 translate-x-[1.5px] rotate-180">
+                      <div className="absolute -top-1.5 right-0 translate-x-[1.5px] rotate-180">
                         <svg
                           width="6"
                           height="12"
@@ -251,7 +251,7 @@ export const Feedback = () => {
                         disabled={formState !== "idle"}
                         type="submit"
                         size={"sm"}
-                        className="relative overflow-hidden rounded-lg bg-linear-to-b from-brand-200 to-brand-400 w-32 h-7 ml-auto [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:justify-center [&>span]:drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.16)]"
+                        className="relative ml-auto h-7 w-32 overflow-hidden rounded-lg bg-linear-to-b from-brand-2 to-brand-4 [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:justify-center [&>span]:drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.16)]"
                       >
                         <AnimatePresence mode="popLayout" initial={false}>
                           <motion.span

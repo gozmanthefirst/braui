@@ -30,7 +30,7 @@ export const LoadingSpinnerButton = () => {
 
   return (
     <Wrapper>
-      <div className="flex px-[120px] py-[40px] justify-center">
+      <div className="flex justify-center px-[120px] py-[40px]">
         <Button
           onClick={() => {
             // This code is just a placeholder
@@ -46,7 +46,7 @@ export const LoadingSpinnerButton = () => {
           }}
           disabled={buttonState !== "idle"}
           size={"sm"}
-          className="relative overflow-hidden rounded-lg bg-linear-to-b from-brand-200 to-brand-400 w-48 [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:justify-center [&>span]:drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.16)]"
+          className="to-brand-4 relative w-48 overflow-hidden rounded-lg bg-linear-to-b from-brand-2 [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:justify-center [&>span]:drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.16)]"
         >
           <AnimatePresence mode="popLayout" initial={false}>
             <motion.span

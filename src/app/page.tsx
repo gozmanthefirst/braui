@@ -9,7 +9,7 @@ const HomePage = () => {
       className={cn("flex items-center justify-center", tacOne.className)}
     >
       <h1 className="text-5xl md:text-6xl">
-        <span className="text-brand-400">motions</span> by gozman
+        <span className="text-brand-4">motions</span> by gozman
       </h1>
     </Container>
   );
