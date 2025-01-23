@@ -21,7 +21,6 @@ WORKDIR /app
 
 # Copy only the necessary files
 COPY --from=deps /app/node_modules ./node_modules
-COPY --from=deps /app/prisma ./prisma
 COPY . .
 
 # Build application
