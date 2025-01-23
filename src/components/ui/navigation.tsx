@@ -1,11 +1,11 @@
 "use client";
 
 // External Imports
+import { useClickAway } from "@uidotdev/usehooks";
 import { AnimatePresence, motion } from "motion/react";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { TbList, TbX } from "react-icons/tb";
-import { useOnClickOutside } from "usehooks-ts";
 
 // Local Imports
 import { Container } from "@/components/ui/container";
@@ -20,8 +20,9 @@ export const Navigation = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [activeItem, setActiveItem] = useState<string>(pathname);
 
-  const ref = useRef(null);
-  useOnClickOutside(ref, () => setNavOpen(false));
+  const ref = useClickAway<HTMLDivElement>(() => {
+    setNavOpen(false);
+  });
 
   useEffect(() => {
     setNavOpen(false);

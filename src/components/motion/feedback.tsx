@@ -1,10 +1,10 @@
 "use client";
 
 // External Imports
+import { useClickAway } from "@uidotdev/usehooks";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
-import { useOnClickOutside } from "usehooks-ts";
 
 // Local Imports
 import { Button } from "@/components/ui/button";
@@ -17,8 +17,9 @@ export const Feedback = () => {
   const [formState, setFormState] = useState("idle");
   const [feedback, setFeedback] = useState("");
 
-  const ref = useRef(null);
-  useOnClickOutside(ref, () => setOpen(false));
+  const ref = useClickAway<HTMLDivElement>(() => {
+    setOpen(false);
+  });
 
   const submit = () => {
     setFormState("loading");

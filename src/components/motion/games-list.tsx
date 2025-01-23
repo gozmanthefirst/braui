@@ -1,10 +1,10 @@
 "use client";
 
 // External Imports
+import { useClickAway } from "@uidotdev/usehooks";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import { useOnClickOutside } from "usehooks-ts";
+import { useEffect, useState } from "react";
 
 // Local Imports
 import { Button } from "@/components/ui/button";
@@ -21,8 +21,9 @@ const MotionButton = motion.create(Button);
 
 export const GamesList = () => {
   const [activeGame, setActiveGame] = useState<Game | null>(null);
-  const ref = useRef(null);
-  useOnClickOutside(ref, () => setActiveGame(null));
+  const ref = useClickAway<HTMLDivElement>(() => {
+    setActiveGame(null);
+  });
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
