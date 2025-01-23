@@ -1,3 +1,3 @@
 # Braui
 
-A repository for building random animated UIs.
+A repository for building brilliant random animated UIs.
