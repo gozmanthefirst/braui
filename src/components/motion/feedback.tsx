@@ -3,12 +3,12 @@
 // External Imports
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { RotatingLines } from "react-loader-spinner";
 import { useOnClickOutside } from "usehooks-ts";
 
 // Local Imports
 import { Button } from "@/components/ui/button";
 import { Wrapper } from "@/components/ui/wrapper";
-import { Spinner } from "../ui/spinner";
 
 const MotionButton = motion.create(Button);
 
@@ -266,7 +266,11 @@ export const Feedback = () => {
                             variants={variants}
                           >
                             {formState === "loading" ? (
-                              <Spinner size={16} color="rgba(0, 0, 0, 0.65)" />
+                              <RotatingLines
+                                visible
+                                width="16"
+                                strokeColor="rgba(0, 0, 0, 0.65)"
+                              />
                             ) : (
                               <span>Send feedback</span>
                             )}

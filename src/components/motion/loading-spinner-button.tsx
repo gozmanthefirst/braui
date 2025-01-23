@@ -6,12 +6,14 @@ import { useState } from "react";
 
 // Local Imports
 import { Button } from "@/components/ui/button";
-import { Spinner } from "@/components/ui/spinner";
 import { Wrapper } from "@/components/ui/wrapper";
+import { RotatingLines } from "react-loader-spinner";
 
 const buttonCopy = {
   idle: "Send me a login link",
-  loading: <Spinner size={16} color="rgba(0, 0, 0, 0.65)" />,
+  loading: (
+    <RotatingLines visible width="16" strokeColor="rgba(0, 0, 0, 0.65)" />
+  ),
   success: "Login link sent!",
 };
 
