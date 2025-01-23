@@ -1,39 +1,39 @@
 FROM node:20-alpine AS base
 
-# Install dependencies only when needed
-FROM base AS deps
 RUN apk add --no-cache libc6-compat
+
+# Set up the application directory
 WORKDIR /app
 
-# Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+# Separate dependencies installation to enable caching
+FROM base AS deps
 
-RUN \
-  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
-  elif [ -f package-lock.json ]; then npm ci; \
-  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
+# Copy only the files needed for installation
+COPY pnpm-lock.yaml package.json ./
 
+# Install dependencies
+RUN corepack enable pnpm && \
+    pnpm install --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
+
+# Copy only the necessary files
 COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/prisma ./prisma
 COPY . .
 
-RUN \
-  if [ -f yarn.lock ]; then yarn run build; \
-  elif [ -f package-lock.json ]; then npm run build; \
-  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm run build; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
+# Build application
+RUN corepack enable pnpm && pnpm run build
 
-# Production image, copy all the files and run next
+# Production stage with only essential files
 FROM base AS runner
 WORKDIR /app
 
-ENV NODE_ENV=production
+ENV NODE_ENV=production \
+    HOSTNAME="0.0.0.0" \
+    PORT=3001
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -45,17 +45,14 @@ RUN mkdir .next
 RUN chown nextjs:nodejs .next
 
 # Automatically leverage output traces to reduce image size
-# https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+# Use non-root user
 USER nextjs
 
-EXPOSE 3004
+# Expose the application port
+EXPOSE 3001
 
-ENV PORT=3004
-
-# server.js is created by next build from the standalone output
-# https://nextjs.org/docs/pages/api-reference/next-config-js/output
-ENV HOSTNAME="0.0.0.0"
+# Start the application
 CMD ["node", "server.js"]
