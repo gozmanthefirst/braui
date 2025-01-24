@@ -1,23 +1,25 @@
 // External Imports
-import { forwardRef, HTMLAttributes } from "react";
+import { HTMLAttributes, Ref } from "react";
 
 // Local Imports
+import { ContainerProps } from "@/components/ui/container";
 import { cn } from "../../lib/utils/cn";
 
-export interface WrapperProps extends HTMLAttributes<HTMLDivElement> {}
+export interface WrapperProps extends HTMLAttributes<HTMLDivElement> {
+  ref?: Ref<HTMLDivElement>;
+}
 
-export const Wrapper = forwardRef<HTMLDivElement, WrapperProps>(
-  ({ className, ...props }, ref) => {
-    return (
+export const Wrapper = ({ className, ref, ...props }: ContainerProps) => {
+  return (
+    <div className="mx-auto max-w-5xl w-full px-4">
       <div
         ref={ref}
         className={cn(
-          "container grid h-full w-full place-items-center",
-          className
+          "rounded-xl border border-neutral-800/60 bg-background py-10 shadow-sm md:py-16 overflow-hidden",
+          className,
         )}
         {...props}
       />
-    );
-  }
-);
-Wrapper.displayName = "Wrapper";
+    </div>
+  );
+};
