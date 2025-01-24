@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Wrapper } from "@/components/ui/wrapper";
 import Image from "next/image";
+import Link from "next/link";
+import { BrandedText } from "../ui/branded-text";
 import { Container } from "../ui/container";
 import Motion, { React, TailwindCSS } from "../ui/stack-icons";
 
@@ -39,14 +41,19 @@ export const GameModal = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-10 md:gap-12">
+    <div className="flex flex-col gap-8 md:gap-10">
       <Container className="flex flex-col gap-2">
         <h2 className="text-sm font-semibold text-neutral-300 md:text-base">
           Game Modal
         </h2>
         <p className="text-sm text-neutral-400 md:text-base">
           Animating a modal that can be used to view more details of an item in
-          a list. The example used here is a list of games.
+          a list. The example used here is a list of games. This component was
+          gotten from{" "}
+          <Link href={"https://x.com/emilkowalski_"} target="_blank">
+            <BrandedText className="">Emil Kowalski's</BrandedText>
+          </Link>{" "}
+          animations course.
         </p>
 
         <div className="flex items-center gap-2">

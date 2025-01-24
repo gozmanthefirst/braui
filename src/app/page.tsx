@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // Local Imports
-import { GameModal } from "@/components/braui/games-modal";
+import { GameModal } from "@/components/braui/game-modal";
 import { BrandedText } from "@/components/ui/branded-text";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils/cn";
@@ -22,7 +22,13 @@ const HomePage = () => {
         </h1>
         <p className="text-lg text-neutral-400 md:text-xl">
           A collection of{" "}
-          <BrandedText>brilliant random animated UIs</BrandedText>, built by{" "}
+          <Link
+            href={"https://github.com/gozmanthefirst/braui"}
+            target="_blank"
+          >
+            <BrandedText>brilliant random animated UIs</BrandedText>
+          </Link>
+          , built by{" "}
           <Link href={"https://x.com/gozmanthefirst"} target="_blank">
             <BrandedText>Gozman</BrandedText>
           </Link>
