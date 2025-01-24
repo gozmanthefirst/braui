@@ -4,7 +4,6 @@ import { ReactNode } from "react";
 
 // Local Imports
 import { Header } from "@/components/ui/header";
-import { Navigation } from "@/components/ui/navigation";
 import { instrumentSans } from "@/styles/fonts";
 import "@/styles/globals.css";
 
@@ -26,7 +25,7 @@ const RootLayout = ({ children }: Props) => {
         <div className="flex min-h-dvh flex-col">
           <Header />
           <div className="flex-1 py-4 md:py-6">{children}</div>
-          <Navigation />
+          {/* <Navigation /> */}
         </div>
       </body>
     </html>
