@@ -25,7 +25,6 @@ const RootLayout = ({ children }: Props) => {
         <div className="flex min-h-dvh flex-col">
           <Header />
           <div className="flex-1 py-4 md:py-6">{children}</div>
-          {/* <Navigation /> */}
         </div>
       </body>
     </html>
