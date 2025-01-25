@@ -51,7 +51,7 @@ export const GameModal = () => {
           a list. The example used here is a list of games. This component was
           gotten from{" "}
           <Link href={"https://x.com/emilkowalski_"} target="_blank">
-            <BrandedText className="">Emil Kowalski's</BrandedText>
+            <BrandedText className="">{`Emil Kowalski's`}</BrandedText>
           </Link>{" "}
           animations course.
         </p>
