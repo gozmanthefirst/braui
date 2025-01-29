@@ -21,48 +21,48 @@ export const MultiStep = () => {
       case 0:
         return (
           <>
-            <h2 className="mb-2 font-semibold text-lg">This is step one</h2>
+            <h2 className="mb-2 text-lg font-semibold">This is step one</h2>
             <p className="text-neutral-400">
               Usually in this step we would explain why this thing exists and
               what it does. Also, we would show a button to go to the next step.
             </p>
-            <div className="flex flex-col gap-2 mt-5">
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-1/2" />
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-1/3" />
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-full" />
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-4/5" />
+            <div className="mt-5 flex flex-col gap-2">
+              <div className="h-4 w-1/2 animate-skeleton rounded-md bg-neutral-800" />
+              <div className="h-4 w-1/3 animate-skeleton rounded-md bg-neutral-800" />
+              <div className="h-4 w-full animate-skeleton rounded-md bg-neutral-800" />
+              <div className="h-4 w-4/5 animate-skeleton rounded-md bg-neutral-800" />
             </div>
           </>
         );
       case 1:
         return (
           <>
-            <h2 className="mb-2 font-semibold text-lg">This is step two</h2>
+            <h2 className="mb-2 text-lg font-semibold">This is step two</h2>
             <p className="text-neutral-400">
               Usually in this step we would explain why this thing exists and
               what it does. Also, we would show a button to go to the next step.
             </p>
-            <div className="flex flex-col gap-2 mt-5">
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-1/2" />
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-1/3" />
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-4/5" />
+            <div className="mt-5 flex flex-col gap-2">
+              <div className="h-4 w-1/2 animate-skeleton rounded-md bg-neutral-800" />
+              <div className="h-4 w-1/3 animate-skeleton rounded-md bg-neutral-800" />
+              <div className="h-4 w-4/5 animate-skeleton rounded-md bg-neutral-800" />
             </div>
           </>
         );
       case 2:
         return (
           <>
-            <h2 className="mb-2 font-semibold text-lg">This is step three</h2>
+            <h2 className="mb-2 text-lg font-semibold">This is step three</h2>
             <p className="text-neutral-400">
               Usually in this step we would explain why this thing exists and
               what it does. Also, we would show a button to go to the next step.
             </p>
-            <div className="flex flex-col gap-2 mt-5">
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-1/2" />
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-1/3" />
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-1/4" />
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-2/5" />
-              <div className="rounded-md bg-neutral-800 h-4 animate-skeleton w-3/4" />
+            <div className="mt-5 flex flex-col gap-2">
+              <div className="h-4 w-1/2 animate-skeleton rounded-md bg-neutral-800" />
+              <div className="h-4 w-1/3 animate-skeleton rounded-md bg-neutral-800" />
+              <div className="h-4 w-1/4 animate-skeleton rounded-md bg-neutral-800" />
+              <div className="h-4 w-2/5 animate-skeleton rounded-md bg-neutral-800" />
+              <div className="h-4 w-3/4 animate-skeleton rounded-md bg-neutral-800" />
             </div>
           </>
         );
@@ -82,7 +82,7 @@ export const MultiStep = () => {
           animate={{
             height: bounds.height,
           }}
-          className="relative my-[100px] mx-auto max-w-[550px] overflow-hidden rounded-xl border border-neutral-800 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04),0_8px_8px_-8px_rgba(0,0,0,0.04)]"
+          className="relative mx-auto my-[100px] max-w-[550px] overflow-hidden rounded-xl border border-neutral-800 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04),0_8px_8px_-8px_rgba(0,0,0,0.04)]"
         >
           <motion.div ref={ref} className="p-6">
             <AnimatePresence
@@ -101,11 +101,11 @@ export const MultiStep = () => {
                 {content}
               </motion.div>
             </AnimatePresence>
-            <div className="flex justify-between mt-8">
+            <div className="mt-8 flex justify-between">
               <MotionButton
                 layout
                 variant={"secondary"}
-                className="h-8 w-20 text-neutral-300 rounded-full shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04),0_8px_8px_-8px_rgba(0,0,0,0.04)] disabled:opacity-50 disabled:pointer-events-auto disabled:cursor-not-allowed"
+                className="h-8 w-20 rounded-full text-neutral-300 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04),0_8px_8px_-8px_rgba(0,0,0,0.04)] disabled:pointer-events-auto disabled:cursor-not-allowed disabled:opacity-50"
                 disabled={currentStep === 0}
                 onClick={() => {
                   if (currentStep === 0) {
@@ -120,7 +120,7 @@ export const MultiStep = () => {
               <MotionButton
                 layout
                 variant={"brand"}
-                className="h-8 w-32 rounded-full shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04),0_8px_8px_-8px_rgba(0,0,0,0.04)] disabled:opacity-50 disabled:pointer-events-auto disabled:cursor-not-allowed"
+                className="h-8 w-32 rounded-full shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04),0_8px_8px_-8px_rgba(0,0,0,0.04)] disabled:pointer-events-auto disabled:cursor-not-allowed disabled:opacity-50"
                 disabled={currentStep === 2}
                 onClick={() => {
                   if (currentStep === 2) {

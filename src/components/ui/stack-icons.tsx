@@ -59,4 +59,3 @@ export const Motion = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-export default Motion;

@@ -12,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BrandedText } from "../ui/branded-text";
 import { Container } from "../ui/container";
-import Motion, { React, TailwindCSS } from "../ui/stack-icons";
+import { Motion, React, TailwindCSS } from "../ui/stack-icons";
 
 type Game = {
   title: string;

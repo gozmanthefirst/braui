@@ -2,6 +2,7 @@
 import Link from "next/link";
 
 // Local Imports
+import { FeedbackForm } from "@/components/braui/feedback-form";
 import { GameModal } from "@/components/braui/game-modal";
 import { BrandedText } from "@/components/ui/branded-text";
 import { Container } from "@/components/ui/container";
@@ -36,9 +37,10 @@ const HomePage = () => {
         </p>
       </Container>
 
-      <div className="bg-red-/400">
+      <>
         <GameModal />
-      </div>
+        <FeedbackForm />
+      </>
     </main>
   );
 };
