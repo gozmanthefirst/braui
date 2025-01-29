@@ -97,8 +97,7 @@ export const FeedbackForm = () => {
               setFeedback("");
             }}
             variant={"secondary"}
-            data-feedbackopen={open}
-            className="relative flex items-center border border-neutral-800 bg-[#1b1b1b] data-[feedbackopen=true]:opacity-0!"
+            className="relative flex items-center border border-neutral-800 bg-[#1b1b1b]"
             style={{ borderRadius: 10 }}
           >
             <motion.span
