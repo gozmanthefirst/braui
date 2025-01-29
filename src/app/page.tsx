@@ -38,8 +38,8 @@ const HomePage = () => {
       </Container>
 
       <>
-        <GameModal />
         <FeedbackForm />
+        <GameModal />
       </>
     </main>
   );

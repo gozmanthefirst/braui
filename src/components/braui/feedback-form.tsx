@@ -98,7 +98,7 @@ export const FeedbackForm = () => {
             }}
             variant={"secondary"}
             data-feedbackopen={open}
-            className="relative flex items-center border border-neutral-800 bg-neutral-800/50 data-[feedbackopen=true]:opacity-0!"
+            className="relative flex items-center border border-neutral-800 bg-[#1b1b1b] data-[feedbackopen=true]:opacity-0!"
             style={{ borderRadius: 10 }}
           >
             <motion.span
@@ -118,7 +118,7 @@ export const FeedbackForm = () => {
               <motion.div
                 layoutId="feedback-button-and-popover"
                 style={{ borderRadius: 12 }}
-                className="absolute h-48 w-108 max-w-[calc(100%_-_2rem)] overflow-hidden border border-neutral-800 bg-neutral-800/50 p-1 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04)] outline-hidden"
+                className="absolute h-48 w-108 max-w-[calc(100%_-_2rem)] overflow-hidden border border-neutral-800 bg-[#1b1b1b] p-1 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_2px_rgba(0,0,0,0.04)] outline-hidden"
                 ref={ref}
               >
                 <motion.span
@@ -221,7 +221,7 @@ export const FeedbackForm = () => {
                         >
                           <path
                             d="M0 1H432"
-                            stroke="oklch(0.205 0 0)"
+                            stroke="oklch(22.21% 0 0)"
                             strokeDasharray="4 4"
                           />
                         </svg>
@@ -238,11 +238,11 @@ export const FeedbackForm = () => {
                             <g clipPath="url(#clip0_2029_22)">
                               <path
                                 d="M0 2C0.656613 2 1.30679 2.10346 1.91341 2.30448C2.52005 2.5055 3.07124 2.80014 3.53554 3.17157C3.99982 3.54301 4.36812 3.98396 4.6194 4.46927C4.87067 4.95457 5 5.47471 5 6C5 6.52529 4.87067 7.04543 4.6194 7.53073C4.36812 8.01604 3.99982 8.45699 3.53554 8.82843C3.07124 9.19986 2.52005 9.4945 1.91341 9.69552C1.30679 9.89654 0.656613 10 0 10V6V2Z"
-                                fill="oklch(0.205 0 0)"
+                                fill="oklch(22.21% 0 0)"
                               />
                               <path
                                 d="M1 12V10C2.06087 10 3.07828 9.57857 3.82843 8.82843C4.57857 8.07828 5 7.06087 5 6C5 4.93913 4.57857 3.92172 3.82843 3.17157C3.07828 2.42143 2.06087 2 1 2V0"
-                                stroke="oklch(0.205 0 0)"
+                                stroke="oklch(22.21% 0 0)"
                                 strokeWidth="1"
                                 strokeLinejoin="round"
                               />
@@ -267,11 +267,11 @@ export const FeedbackForm = () => {
                             <g clipPath="url(#clip0_2029_22)">
                               <path
                                 d="M0 2C0.656613 2 1.30679 2.10346 1.91341 2.30448C2.52005 2.5055 3.07124 2.80014 3.53554 3.17157C3.99982 3.54301 4.36812 3.98396 4.6194 4.46927C4.87067 4.95457 5 5.47471 5 6C5 6.52529 4.87067 7.04543 4.6194 7.53073C4.36812 8.01604 3.99982 8.45699 3.53554 8.82843C3.07124 9.19986 2.52005 9.4945 1.91341 9.69552C1.30679 9.89654 0.656613 10 0 10V6V2Z"
-                                fill="oklch(0.205 0 0)"
+                                fill="oklch(22.21% 0 0)"
                               />
                               <path
                                 d="M1 12V10C2.06087 10 3.07828 9.57857 3.82843 8.82843C4.57857 8.07828 5 7.06087 5 6C5 4.93913 4.57857 3.92172 3.82843 3.17157C3.07828 2.42143 2.06087 2 1 2V0"
-                                stroke="oklch(0.205 0 0)"
+                                stroke="oklch(22.21% 0 0)"
                                 strokeWidth="1"
                                 strokeLinejoin="round"
                               />
